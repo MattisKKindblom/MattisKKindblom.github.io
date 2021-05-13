@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="base.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section> <!--First section of the body that contains the name of the project aswell as the searchbar and go button-->
+        <section class="search">
+        <h1>Mattis Flickr<br/>Project</h1>
+        <input id="userInput" type="text" placeholder="Search...">
+        <button class="btn" type="button" onclick="loadImages(1);">Go!</button><!--Choosed to have a onclick out here that sets to the first page-->
+        </section>
+        <h4 id="totload"></h4><!--This h4 gets filled by javascript functions-->
+    </section>
+    <main><!--Main section that contains the photos and the pageHandler-->
+        <ul id="allImg"></ul> <!--This is the unordered list that contains the photos-->
+        <footer id="pageHandler"><!--This footer contains change page functions and a h3 tag that tells the user what page is currently viewed-->
+            <button class="btn" type="button" id="previous" onclick="previousPage();">Previous page</button>
+            <h3 id="htmlpages"></h3><!--Filled from javascript-->
+            <button class="btn" type="button" id="next" onclick="nextPage();">Next page</button>
+        </footer>
+    </main>
+    <div id="lightbox" onclick="lightBox();"></div><!--This is my lightbox div that goes over everything else when activated and is started by clicking a photo-->
+</body>
+</html>
